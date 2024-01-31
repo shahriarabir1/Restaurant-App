@@ -22,7 +22,7 @@ const MenuScreen =(props) => {
     return (
         <View>
             <FlatList 
-            data={data}
+            data={data[0]}
             renderItem={
                 ({item})=>(<MenuItems item={item} selectDish={()=>props.navigation.navigate('Dish',{dish:item})}/>)
             }

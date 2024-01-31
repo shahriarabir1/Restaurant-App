@@ -4,6 +4,7 @@ import MenuScreen from './screens/MenuScreen'
 import DishDetailsScreen from './screens/DishDetailsScreen'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { createStackNavigator } from "@react-navigation/stack"
+import FavouriteScreen from './screens/FavouriteScreen'
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -16,6 +17,7 @@ const DishDetails = () => {
                 title: route.params.dish.name, 
                 headerTitleStyle: { fontWeight: 'bold' }
                 })} />
+            
         </Stack.Navigator>
     )
 }
@@ -31,6 +33,7 @@ const AppNavigator = () => {
         }}>
             <Drawer.Screen name='Home' component={HomeScreen} />
             <Drawer.Screen name='Menu' component={DishDetails} />
+            <Drawer.Screen name='Favourite' component={FavouriteScreen}/>
 
 
         </Drawer.Navigator>
